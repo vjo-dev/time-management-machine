@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TimeLine from './components/TimeLine';
 
-// const d = new Date()
-// const time_to = [
-//         {"name": "year", "value": "1955"},
-//         {"name": "month", "value": "NOV"},
-//         {"name": "day", "value": "05"},
-//         {"name": "hour", "value": "01"},
-//         {"name": "min", "value": "22"},
-//         {"name": "sec", "value": "00"},
-//     ]
-// const time_from = [
-//         {"name": "year", "value": "1885"},
-//         {"name": "month", "value": "DEC"},
-//         {"name": "day", "value": "07"},
-//         {"name": "hour", "value": "08"},
-//         {"name": "min", "value": "00"},
-//         {"name": "sec", "value": "00"},
-//     ]
+const d = new Date()
+const time_to = [
+        {"name": "year", "value": "1955"},
+        {"name": "month", "value": "NOV"},
+        {"name": "day", "value": "05"},
+        {"name": "hour", "value": "01"},
+        {"name": "min", "value": "22"},
+        {"name": "sec", "value": "00"},
+    ]
+const time_from = [
+        {"name": "year", "value": "1885"},
+        {"name": "month", "value": "DEC"},
+        {"name": "day", "value": "07"},
+        {"name": "hour", "value": "08"},
+        {"name": "min", "value": "00"},
+        {"name": "sec", "value": "00"},
+    ]
 
 const dd = new Date()
 
@@ -43,25 +43,6 @@ const present = [
         {"name": "sec", "value": String(d.getSeconds()).padStart(2, '0')},
     ]
 
-const time_to = [
-        {"name": "year", "value": dd.getFullYear()},
-        {"name": "month", "value": dd.toLocaleString('en-US', {month: 'short'}).toUpperCase()},
-        {"name": "day", "value": String(dd.getDate()).padStart(2, '0')},
-        {"name": "hour", "value": String(dd.getHours()).padStart(2, '0')},
-        {"name": "min", "value": String(dd.getMinutes() + 10).padStart(2, '0')},
-        {"name": "sec", "value": String(dd.getSeconds()).padStart(2, '0')},
-    ]
-
-const time_from = [
-        {"name": "year", "value": dd.getFullYear()},
-        {"name": "month", "value": dd.toLocaleString('en-US', {month: 'short'}).toUpperCase()},
-        {"name": "day", "value": String(dd.getDate()).padStart(2, '0')},
-        {"name": "hour", "value": String(dd.getHours()).padStart(2, '0')},
-        {"name": "min", "value": String(dd.getMinutes()).padStart(2, '0')},
-        {"name": "sec", "value": String(dd.getSeconds()).padStart(2, '0')},
-    ]
-
-
 return (
     <AppStyle>
         <div onClick={() => console.log('test')}>
@@ -77,6 +58,7 @@ const AppStyle = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     background: black;
 
