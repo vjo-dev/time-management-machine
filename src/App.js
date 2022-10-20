@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import TimeLine from './components/TimeLine';
+import Present from './features/present/Present';
 
-const d = new Date()
 const time_to = [
         {"name": "year", "value": "1955"},
         {"name": "month", "value": "NOV"},
@@ -20,35 +20,15 @@ const time_from = [
         {"name": "sec", "value": "00"},
     ]
 
-const dd = new Date()
-
 export default function App() {
-    const [time, setTime] = useState(Date.now());
 
-    useEffect(() => {
-        const interval = setInterval(() => setTime(Date.now()), 1000);
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
-
-const d = new Date()
-
-const present = [
-        {"name": "year", "value": d.getFullYear()},
-        {"name": "month", "value": d.toLocaleString('en-US', {month: 'short'}).toUpperCase()},
-        {"name": "day", "value": String(d.getDate()).padStart(2, '0')},
-        {"name": "hour", "value": String(d.getHours()).padStart(2, '0')},
-        {"name": "min", "value": String(d.getMinutes()).padStart(2, '0')},
-        {"name": "sec", "value": String(d.getSeconds()).padStart(2, '0')},
-    ]
 
 return (
     <AppStyle>
         <div onClick={() => console.log('test')}>
         <TimeLine color='red' name='destination time' time={time_to}/>
         </div>
-        <TimeLine color='green' name='present time' time={present}/>
+		<Present />
         <TimeLine color='yellow' name='last time departed' time={time_from}/>
     </AppStyle>
 );
