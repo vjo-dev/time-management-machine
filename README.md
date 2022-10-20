@@ -1,12 +1,13 @@
 # TIME MANAGEMENT MACHINE
 
-replica of time travel machine board of Doc. Emmett Brown.
-Countdown principle with multiple information to monitor progress.
+WORK IN PROGRESS
+
+replica of time travel machine control board of Doc. Emmett Brown.
 
 ## Principle
 
-3 time and date selection :
+3 dates :
 
+- destination time = time to destination (end of countdown).
+- present time = current time.
 - last time departed = time when we start the countdown.
-- present time = cureent time.
-- destination time = time of destination.
