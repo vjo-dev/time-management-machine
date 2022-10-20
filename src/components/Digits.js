@@ -12,6 +12,7 @@ export default function Digits({
 
 const DigitStyle = styled.div`
     width: fit-content;
+	min-height: 63px;
     text-align: center;
     padding: 0.2rem 0.6rem 0.2rem 0.4rem;
     font-family: 'digital-7';
